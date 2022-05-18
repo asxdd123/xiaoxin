@@ -1,4 +1,4 @@
-package com.heima.admin.controller;
+package com.heima.admin.controller.v1;
 
 import com.heima.admin.service.AdChannelService;
 import com.heima.api.admin.AdChannelControllerApi;
