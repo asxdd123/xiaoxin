@@ -1,6 +1,7 @@
 package com.heima.api.admin;
 
 import com.heima.model.admin.dtos.ChannelDto;
+import com.heima.model.admin.pojos.AdChannel;
 import com.heima.model.common.dtos.ResponseResult;
 
 public interface AdChannelControllerApi {
@@ -11,4 +12,27 @@ public interface AdChannelControllerApi {
      * @return
      */
     public ResponseResult findByNameAndPage(ChannelDto dto);
+
+
+    /**
+     * 新增
+     * @param channel
+     * @return
+     */
+    public ResponseResult saveAdChannel (AdChannel channel);
+
+    /**
+     * 修改
+     * @param channel
+     * @return
+     */
+    public ResponseResult updateAdChannel (AdChannel channel);
+
+
+    /**
+     * 删
+     * @param id
+     * @return
+     */
+    public ResponseResult deleteAdChannel (Integer id);
 }
