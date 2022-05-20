@@ -34,7 +34,7 @@ public class AdChannelController implements AdChannelControllerApi {
      * @param channel
      * @return
      */
-    @PostMapping("/saveAdChannel")
+    @PostMapping("/save")
     @Override
     public ResponseResult saveAdChannel(@RequestBody AdChannel channel) {
         return channelService.saveAdChannel(channel);
@@ -46,7 +46,7 @@ public class AdChannelController implements AdChannelControllerApi {
      * @param channel
      * @return
      */
-    @PostMapping("/updateAdChannel")
+    @PostMapping("/update")
     @Override
     public ResponseResult updateAdChannel(@RequestBody AdChannel channel) {
         return channelService.updateAdChannel(channel);
@@ -59,7 +59,7 @@ public class AdChannelController implements AdChannelControllerApi {
      * @return
      */
     @Override
-    @PostMapping("/deleteAdChannel/{id}")
+    @PostMapping("/del")
     public ResponseResult deleteAdChannel(@PathVariable("id") Integer id) {
         return channelService.deleteAdChannel(id);
     }
