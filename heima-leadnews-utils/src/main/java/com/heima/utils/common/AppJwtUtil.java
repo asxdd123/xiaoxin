@@ -6,6 +6,9 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.*;
 
+/**
+ * jwt工具类
+ */
 public class AppJwtUtil {
 
     // TOKEN的有效期一天（S）
@@ -106,13 +109,18 @@ public class AppJwtUtil {
         return key;
     }
 
+    /**
+     * 测试
+     * @param args
+     */
     public static void main(String[] args) {
        /* Map map = new HashMap();
         map.put("id","11");*/
-        System.out.println(AppJwtUtil.getToken(1102L));
-        Jws<Claims> jws = AppJwtUtil.getJws("eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAADWLQQqEMAwA_5KzhURNt_qb1KZYQSi0wi6Lf9942NsMw3zh6AVW2DYmDGl2WabkZgreCaM6VXzhFBfJMcMARTqsxIG9Z888QLui3e3Tup5Pb81013KKmVzJTGo11nf9n8v4nMUaEY73DzTabjmDAAAA.4SuqQ42IGqCgBai6qd4RaVpVxTlZIWC826QA9kLvt9d-yVUw82gU47HDaSfOzgAcloZedYNNpUcd18Ne8vvjQA");
+        System.out.println(AppJwtUtil.getToken(1102L));  //生成token
+        Jws<Claims> jws = AppJwtUtil.getJws("eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAADWLSwqEMBAF79JrA-l8TOJtOhoxghDoCA6Dd7dduHm8oqg_7L3CBKv22SzJKWepyGhSlOeowhxjtCE47xIMUKnDhKO3mIzGMACfWWr-cS_H65kFt1IPEqJzEaLW5JerfaUf37KKQ9TmfgARstAngwAAAA.Mo0t-xAqWuXJgr58-c2eU-B0bpR0BFt9Cus4x02qJd0BLvPxkCKlCiUeoFlgu6WQS1RWmouS9wDXJuT8S2mDaA");
         Claims claims = jws.getBody();
-        System.out.println(claims.get("id"));
+        System.out.println(claims);
+        System.out.println(claims.get("id"));  // 1102
 
     }
 

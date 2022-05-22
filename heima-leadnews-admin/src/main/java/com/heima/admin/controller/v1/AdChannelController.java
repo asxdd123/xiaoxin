@@ -8,12 +8,19 @@ import com.heima.model.common.dtos.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+//@CrossOrigin(allowCredentials = "true",allowedHeaders = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/v1/channel")
 public class AdChannelController implements AdChannelControllerApi {
 
     @Autowired
     private AdChannelService channelService;
+
+
+    @PostMapping("/aa")
+    public String hello() {
+        return "hello";
+    }
 
     /**
      * 根据名称分页查询频道列表
