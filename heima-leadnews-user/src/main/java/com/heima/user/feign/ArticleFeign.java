@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 /**
- * 自媒体远程接口
+ * 作者远程接口
  */
 @FeignClient("leadnews-article")
 public interface ArticleFeign {

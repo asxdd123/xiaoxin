@@ -19,6 +19,12 @@ public class AuthorController implements AuthorControllerApi {
     @Autowired
     private AuthorService authorService;
 
+
+    /**
+     *根据用户id查询作者信息
+     * @param id
+     * @return
+     */
     @GetMapping("/findByUserId/{id}")
     @Override
     public ApAuthor findByUserId(@PathVariable("id") Integer id){
@@ -29,6 +35,13 @@ public class AuthorController implements AuthorControllerApi {
         return null;
     }
 
+
+
+    /**
+     * 保存作者
+     * @param apAuthor
+     * @return
+     */
     @PostMapping("/save")
     @Override
     public ResponseResult save(@RequestBody ApAuthor apAuthor){

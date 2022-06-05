@@ -28,7 +28,11 @@ public class ApUserRealnameController implements ApUserRealnameControllerApi {
     }
 
 
-
+    /**
+     * 审核通过
+     * @param dto
+     * @return
+     */
     @PostMapping("/authPass")
     @Override
     public ResponseResult authPass(@RequestBody AuthDto dto) {
@@ -36,7 +40,11 @@ public class ApUserRealnameController implements ApUserRealnameControllerApi {
     }
 
 
-
+    /**
+     * 审核失败
+     * @param dto
+     * @return
+     */
     @PostMapping("/authFail")
     @Override
     public ResponseResult authFail(@RequestBody AuthDto dto) {
